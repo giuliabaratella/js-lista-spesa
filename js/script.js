@@ -5,10 +5,16 @@
 // MILESTONE 2 - STAMPA DELLA LISTA DELLA SPESA
 // // Data la lista della spesa creata in precedenza, stampare sulla pagina (anche brutalmente, basta che si vedano) gli elementi della lista individualmente. 
 
-const btn = document.getElementById('button');
-const inputBox = document.getElementById ('data');
-const result = document.querySelector ('.alert');
-const inputBoxLabel = document.getElementById('data-label');
-btn.addEventListener('click', function() {
 
-})
+let list = [];
+let product = '';
+while (product !== 'stop') {
+    product = prompt('Aggiungi un elemento alla lista, se hai finito scrivi "stop"');
+    if (product !== 'stop' && product !== '') {
+        console.log (product);
+        list.push (product);
+    }
+}
+console.log (list);
+
+
