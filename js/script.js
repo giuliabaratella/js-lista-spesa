@@ -10,6 +10,7 @@ let list = [];
 let product = '';
 while (product !== 'stop') {
     product = prompt('Aggiungi un elemento alla lista, se hai finito scrivi "stop"');
+    product = product.toLocaleLowerCase().trim();
     if (product !== 'stop' && product !== '') {
         console.log (product);
         list.push (product);
@@ -18,3 +19,9 @@ while (product !== 'stop') {
 console.log (list);
 
 
+for (let i = 0; i < list.length; i++) {
+    const elemList = document.createElement('div');
+    const listPrint = document.getElementById('list');
+    elemList.innerHTML = '-' + ' ' + list[i];
+    listPrint.append(elemList);
+}
